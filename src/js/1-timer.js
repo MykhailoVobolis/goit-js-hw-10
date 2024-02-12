@@ -58,8 +58,9 @@ function startTimer(event) {
 
 // Функція підрахунку значень
 function convertMs() {
-  if (new Date() < userSelectedDate) {
-    const ms = userSelectedDate - new Date();
+  if (Date.now() < userSelectedDate) {
+    const ms = userSelectedDate - Date.now();
+
     // Number of milliseconds per unit of time
     const second = 1000;
     const minute = second * 60;
