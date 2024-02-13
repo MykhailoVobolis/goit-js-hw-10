@@ -34,25 +34,25 @@ function onClick(event) {
     .then(value => {
       // Ініціаналізація бібліотеки iziToast
       iziToast.success({
-        icon: 'null',
+        message: `✅ Fulfilled promise in ${delay}ms`,
+        transitionIn: 'bounceInDown',
+        theme: 'dark',
         messageColor: '#ffffff',
-        backgroundColor: '#59A10D',
-        targetFirst: false,
+        color: '#59A10D',
         progressBar: false,
         position: 'topRight',
-        message: `✅ Fulfilled promise in ${delay}ms`,
       });
     })
     .catch(error => {
       // Ініціаналізація бібліотеки iziToast
       iziToast.error({
-        icon: 'null',
+        message: `❌ Rejected promise in ${delay}ms`,
+        transitionIn: 'bounceInDown',
+        theme: 'dark',
         messageColor: '#ffffff',
-        backgroundColor: '#ef4040',
-        targetFirst: false,
+        color: '#ef4040',
         progressBar: false,
         position: 'topRight',
-        message: `❌ Rejected promise in ${delay}ms`,
       });
     });
 }
